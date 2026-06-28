@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Send email notification using Web3Forms
       // Replace the placeholder below with your Web3Forms Access Key (from https://web3forms.com)
-      const web3FormsKey = "YOUR_WEB3FORMS_ACCESS_KEY_HERE";
+      const web3FormsKey = "2a4e28fd-6413-4bf1-a5f2-46c6fc0d4838";
       if (web3FormsKey && web3FormsKey !== "YOUR_WEB3FORMS_ACCESS_KEY_HERE") {
         const formData = new FormData();
         formData.append("access_key", web3FormsKey);
