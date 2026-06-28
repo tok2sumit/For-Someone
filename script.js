@@ -161,8 +161,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (web3FormsKey && web3FormsKey !== "YOUR_WEB3FORMS_ACCESS_KEY_HERE") {
         const formData = new FormData();
         formData.append("access_key", web3FormsKey);
-        formData.append("subject", `She Left a Response! Mood: ${selectedMood} 💚`);
-        formData.append("from_name", "Honest Thoughts Webpage");
+        formData.append("subject", "She said Yes! 💍");
+        formData.append("from_name", "Simran");
         formData.append("Mood", selectedMood);
         formData.append("Response Note", feedbackText);
 
