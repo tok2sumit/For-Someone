@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Few Honest Thoughts | For You 💚</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Lottie Web Player (bypasses local CORS constraints) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+  <script src="images/girl-data.js"></script>
+  <script src="images/two-people-thinking-data.js"></script>
+  <script src="images/guitar-cozy-data.js"></script>
+  <script src="images/relaxing-chair-data.js"></script>
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Landing Overlay Screen -->
+  <div class="landing-overlay" id="landingOverlay">
+    <div class="landing-content">
+      <div class="landing-image-container">
+        <img src="images/landing.jpg" alt="Welcome" class="landing-img">
+      </div>
+      <p class="landing-text">"I may not know how to say things in words, but I've tried to express them..."</p>
+      <button class="landing-btn" id="enterBtn">If curious, click here 😊</button>
+    </div>
+  </div>
+
+  <!-- Floating Background Particles Container -->
+  <div class="particles-container" id="particlesContainer"></div>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-logo">
+      <div class="logo-ring"></div>
+      <svg viewBox="0 0 24 24" width="90" height="90">
+        <!-- Minimalist elegant leaf branch SVG -->
+        <path d="M17,8C8,8,4,16,4,16s4-2,8-4c0,0-1,4,2,7c3-3,5-7,5-7s1,2,3,2C22,14,19,9,17,8z" />
+        <path d="M12,4c-3.5,0-6,2.5-6,2.5s2-0.5,4,0.5c0,0-1.5,2,0.5,4c2-2,3-5,3-5s1.5,1,2,0.5C16.5,6,14.5,4,12,4z" opacity="0.7"/>
+      </svg>
+    </div>
+    <span class="hero-subtitle">✨ A simple conversation</span>
+    <h1 class="hero-title">A Few Honest &amp; Personal Thoughts</h1>
+    <p class="hero-desc">I usually keep these feelings to myself, but since this is about our future, I wanted to share them with you directly and openly. 🌿</p>
+    
+    <div class="scroll-indicator">
+      <span>Scroll Down</span>
+      <svg viewBox="0 0 24 24" width="20" height="20">
+        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+      </svg>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <!-- Section 1: First Impressions -->
+    <section class="letter-section reveal">
+      <span class="section-tag">First Impressions 🗓️</span>
+      <h2 class="section-title">Where It All Began</h2>
+      <div class="section-content">
+        <p>We’ve been talking for about a month and a half now, but my mind often goes back to January when we first met with our parents. When I first saw your photo, I liked it. 😊</p>
+        
+        <div class="green-dress-card">
+          <div class="video-container" id="girlLottieContainer"></div>
+          <p style="margin: 0; font-style: italic; font-weight: 500;">
+            "But seeing you in person... I still remember you in that green dress 💚 (definitely green, not yellow) with eyewear. You looked wonderful, and I immediately felt a spark of interest."
+          </p>
+        </div>
+        
+        <p>When we first talked, I thought you were a bit shy. I'm usually very practical, maybe even a little too analytical when talking. But slowly, as we shared more, I realized my initial assumptions were wrong. You had a quiet depth, and I found myself liking that more and more. ✨</p>
+      </div>
+    </section>
+
+    <!-- Section 2: Different Perspectives (Avatars & Interactive Connection) -->
+    <section class="letter-section reveal">
+      <span class="section-tag">Perspectives 🤝</span>
+      <h2 class="section-title">Embracing Our Differences</h2>
+      <div class="section-content">
+        <!-- Lottie animation of two people thinking -->
+        <div class="video-container" id="thinkingLottieContainer"></div>
+
+        <p>At first, I thought that whoever I married should be exactly like me—a sort of reflection. I hoped for someone who shared my practical mindset, my ambivert nature, and who also didn't drink 😜. I even figured that if I am occasionally quiet or a bit 'boring,' my partner should be the same way.</p>
+        
+        <p>But recently, I had a realization: what is the point of having a life partner who is just a duplicate of myself? It is actually much more beautiful this way. Instead of a replica, I see the value in us bringing different perspectives to how we see things. We can balance each other, point out areas where we can improve, and grow together.</p>
+        
+        <!-- Interactive Avatar Area -->
+        <div class="avatar-connection-area">
+          
+          <!-- Boy Avatar Card -->
+          <div class="avatar-card" id="boyCard">
+            <div class="avatar-wrapper">
+              <img src="images/him.jpeg" alt="Me" class="avatar-img">
+            </div>
+            <h4>My Side 🧑</h4>
+            <p>Practical, analytical, a bit quiet, and old-school in my commitments.</p>
+          </div>
+
+          <!-- Connection Bridge -->
+          <div class="connection-bridge">
+            <div class="connecting-line"></div>
+            <div class="connection-heart">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="var(--color-accent)">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Girl Avatar Card -->
+          <div class="avatar-card" id="girlCard">
+            <div class="avatar-wrapper">
+              <img src="images/her.jpeg" alt="You" class="avatar-img">
+            </div>
+            <h4>Your Side 👩</h4>
+            <p>Practical, positive, and strong in standing for yourself. You bring new perspectives.</p>
+          </div>
+
+        </div>
+
+        <div class="grid-two-col" style="margin-top: 24px;">
+          <div class="perspective-box">
+            <h3>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="var(--color-sage)">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+              </svg>
+              New Perspectives 💡
+            </h3>
+            <p style="font-size: 0.9rem; line-height: 1.5; color: var(--color-text-light);">You bring a different way of seeing the world, adding colors and ideas I might overlook on my own.</p>
+          </div>
+          <div class="perspective-box">
+            <h3>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="var(--color-sage)">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+              Growth &amp; Balance 🌱
+            </h3>
+            <p style="font-size: 0.9rem; line-height: 1.5; color: var(--color-text-light);">I want to listen when you point out where I can improve, growing together as husband and wife.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Our Foundation -->
+    <section class="letter-section reveal">
+      <span class="section-tag">Our Foundation 🏡</span>
+      <h2 class="section-title">Comfort, Peace &amp; Respect</h2>
+      <div class="section-content">
+        <!-- Cozy animation of playing guitar and reading -->
+        <div class="video-container" id="cozyLottieContainer"></div>
+
+        <p>If we walk this path together, my promise to you is simple: <span class="highlight">I will do my absolute best to make your life comfortable.</span> In return, I hope you can bring peace and calm into mine. 🕊️</p>
+        
+        <blockquote class="quote-block">
+          "I will respect your parents and family as my own, and I trust that you will do the same for mine. I want to understand your needs deeply, and I hope we can build a space where you understand mine too."
+        </blockquote>
+        
+        <p>I also want to say that I truly respect how you know how to take a stand for yourself. That strength, combined with your positive attitude, is something I really admire and value in you. 🌟</p>
+
+        <p>We are human, and we might make mistakes. But my philosophy is straightforward: if I do something wrong, tell me directly and I will try my best to correct it. Likewise, if I feel something could be better, I hope you’ll hear my perspective with an open heart. 💞</p>
+      </div>
+    </section>
+
+    <!-- Section 4: Old School Marriage -->
+    <section class="letter-section reveal">
+      <span class="section-tag">Values 📜</span>
+      <h2 class="section-title">A Bit Old School</h2>
+      <div class="section-content">
+        <!-- Relaxing chair animation -->
+        <div class="video-container" id="relaxingChairLottieContainer"></div>
+
+        <p>I have always believed in the philosophy of being a "one-woman man." I want to dedicate my care, my effort, and my life to my wife. I know my thinking when it comes to marriage is a bit old-school—not about division of chores, but about commitment. I see myself spending my entire life with the same person. 💍</p>
+        
+        <p>To be honest, the thought of this not working out is scary. And to make sure it does, I believe the single most important foundation is complete honesty.</p>
+        
+        <p>People often advise not to disclose too much of yourself early on, warning that others might take you for granted, or see you as uninteresting. <strong style="color: var(--color-primary);">But I don't believe in playing those games.</strong> This is marriage. We should be able to show our true selves without fear. 🤝</p>
+      </div>
+    </section>
+
+    <!-- Section 5: A Safe Space to Share -->
+    <section class="letter-section reveal">
+      <span class="section-tag">Vulnerability 🗝️</span>
+      <h2 class="section-title">Sharing the Quiet Moments</h2>
+      <div class="section-content">
+        <p>I am naturally shy and emotional, and I don't easily share how I feel with others. I've always had a habit of keeping things inside. My parents are incredibly supportive, but conversation is usually from a family perspective. Telling my mother about my worries or emotional stress just makes her take on too much load, and as guys, it's often hard to talk emotionally with parents. 😔</p>
+        
+        <p>For a long time, I kept telling myself, <em>"This is just how it is."</em> But deep down, I always wished for someone to look at me, notice the silence, and simply ask, <span class="highlight">"Is everything okay?"</span> 💭</p>
+        
+        <p>I hope that we can be that safe space for each other—where I care for your comfort and needs, and you support me so that I always feel safe putting you first in everything. 🌸</p>
+
+        <p>To be completely honest, I don't trust people easily. It takes time for me to open up. But talking to you lately, I’ve felt a sense of comfort—I feel like I can truly trust you and your words. That is a very new and special feeling for me. 💚</p>
+      </div>
+    </section>
+
+    <!-- Section 6: Closing Thought -->
+    <section class="letter-section reveal">
+      <span class="section-tag">Looking Forward 💫</span>
+      <h2 class="section-title">A Simple Question</h2>
+      <div class="section-content">
+        <p>I remember telling you once: <em>"If a girl is genuinely interested in knowing how my life was, who I really am, and how I feel, then I am completely ready to see her as my wife."</em></p>
+        
+        <p>I know I might be asking for a lot, and I hope I haven't bored you with these thoughts. But this is me, without any pretenses. 😊</p>
+        
+        <p style="font-weight: 500; line-height: 1.6;">If you've read through this and feel that we could build something beautiful together, I would love to hear your thoughts below. For me, sharing your response here will be a gentle confirmation—a sign that you are genuinely interested (I know you've already told me, but it means a lot to hear it) and okay with my thoughts. In return, receiving this feedback will be a "Yes" from my end too for our marriage, showing that we are both ready to step forward and get to know each other even more. 💚👇</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Feedback Section -->
+  <section class="feedback-section reveal">
+    <div class="container">
+      <div class="feedback-card" id="feedbackCard">
+        
+        <!-- Form State -->
+        <div id="formCard">
+          <div class="feedback-intro">
+            <h2>Leave Your Feedback ✍️</h2>
+            <p>Your thoughts mean a lot to me. Choose a mood and leave a note below—only you and I will know what you write.</p>
+          </div>
+          
+          <form id="feedbackForm">
+            <div class="form-group">
+              <label>How did reading this make you feel?</label>
+              <div class="mood-selector">
+                <button type="button" class="mood-btn" data-mood="Warmly Smiling">
+                  😊 Warmly Smiling
+                </button>
+                <button type="button" class="mood-btn" data-mood="Intrigued &amp; Curious">
+                  ✨ Curious to Know More
+                </button>
+                <button type="button" class="mood-btn" data-mood="Happy &amp; Peaceful">
+                  💚 Happy &amp; Peaceful
+                </button>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="feedbackText">Your Thoughts / Notes</label>
+              <textarea id="feedbackText" class="form-control" rows="5" placeholder="Share whatever is on your mind..."></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">
+              <span>Send Your Response</span>
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <!-- Success State -->
+        <div id="successState" class="feedback-success">
+          <div class="success-icon">
+            <div class="success-glow"></div>
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+          </div>
+          <h3>Thank you for sharing 🌸</h3>
+          <p>Your response has been saved. I'm really looking forward to talking more with you soon.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Completely blank footer. The admin feedback viewer trigger is placed invisibly in the bottom-right corner -->
+  <button id="adminTrigger" style="position: fixed; bottom: 15px; right: 15px; width: 24px; height: 24px; opacity: 0; cursor: default; border: none; background: none; z-index: 1000;" title="System"></button>
+
+  <!-- Admin Modal -->
+  <div class="admin-modal" id="adminModal">
+    <div class="admin-modal-content">
+      <div class="admin-modal-header">
+        <h3 style="margin: 0; font-family: var(--font-sans); font-weight: 600;">Submitted Responses 📝</h3>
+        <button class="admin-modal-close" id="adminClose">&times;</button>
+      </div>
+      <div class="admin-modal-body">
+        <p id="noFeedbackMsg" style="text-align: center; color: var(--color-text-light); margin: 20px 0;">
+          No responses received yet.
+        </p>
+        <div id="adminList">
+          <!-- Dynamic Feedback Entries Go Here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
