@@ -110,147 +110,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Mood Selection Logic
-  const moodButtons = document.querySelectorAll('.mood-btn');
-  let selectedMood = '';
-
-  moodButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      moodButtons.forEach(b => b.classList.remove('selected'));
-      btn.classList.add('selected');
-      selectedMood = btn.getAttribute('data-mood');
-    });
-  });
-
-  // Feedback Submission Logic
-  const feedbackForm = document.getElementById('feedbackForm');
-  const formCard = document.getElementById('formCard');
-  const successState = document.getElementById('successState');
-
-  if (feedbackForm) {
-    feedbackForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      
-      const feedbackText = document.getElementById('feedbackText').value.trim();
-      
-      if (!selectedMood) {
-        alert('Please select a mood that represents how you feel.');
-        return;
-      }
-      
-      if (!feedbackText) {
-        alert('Please write a brief note.');
-        return;
-      }
-
-      // Save to localStorage
-      const feedbackData = {
-        mood: selectedMood,
-        text: feedbackText,
-        timestamp: new Date().toLocaleString()
-      };
-
-      // Retrieve existing feedbacks
-      let existingFeedbacks = JSON.parse(localStorage.getItem('rightbus_personal_feedbacks') || '[]');
-      existingFeedbacks.push(feedbackData);
-      localStorage.setItem('rightbus_personal_feedbacks', JSON.stringify(existingFeedbacks));
-
-      // Send email notification using Web3Forms
-      // Replace the placeholder below with your Web3Forms Access Key (from https://web3forms.com)
-      const web3FormsKey = "2a4e28fd-6413-4bf1-a5f2-46c6fc0d4838";
-      if (web3FormsKey && web3FormsKey !== "YOUR_WEB3FORMS_ACCESS_KEY_HERE") {
-        const formData = new FormData();
-        formData.append("access_key", web3FormsKey);
-        formData.append("subject", "She said Yes! 💍");
-        formData.append("from_name", "Simran");
-        formData.append("Mood", selectedMood);
-        formData.append("Response Note", feedbackText);
-
-        fetch("https://api.web3forms.com/submit", {
-          method: "POST",
-          body: formData
-        })
-        .then(res => res.json())
-        .then(resData => {
-          if (resData.success) {
-            console.log("Email notification sent successfully!");
-          } else {
-            console.error("Email notification failed:", resData.message);
-          }
-        })
-        .catch(err => {
-          console.error("Email API network error:", err);
-        });
-      }
-
-      // Animate transition to success state
-      formCard.style.opacity = '0';
-      formCard.style.transform = 'translateY(10px)';
-      
-      setTimeout(() => {
-        formCard.style.display = 'none';
-        successState.style.display = 'block';
-        successState.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }, 400);
-    });
-  }
-
-  // Admin Dashboard Modal Logic
-  const adminTrigger = document.getElementById('adminTrigger');
-  const adminModal = document.getElementById('adminModal');
-  const adminClose = document.getElementById('adminClose');
-  const adminList = document.getElementById('adminList');
-  const noFeedbackMsg = document.getElementById('noFeedbackMsg');
-
-  const updateAdminList = () => {
-    const feedbacks = JSON.parse(localStorage.getItem('rightbus_personal_feedbacks') || '[]');
-    
-    if (feedbacks.length === 0) {
-      noFeedbackMsg.style.display = 'block';
-      adminList.innerHTML = '';
-    } else {
-      noFeedbackMsg.style.display = 'none';
-      adminList.innerHTML = feedbacks.map(item => `
-        <div class="feedback-item">
-          <div class="feedback-item-header">
-            <span>${item.timestamp}</span>
-            <span class="feedback-item-mood">${item.mood}</span>
-          </div>
-          <p style="font-size: 0.95rem; line-height: 1.5; color: var(--color-text); word-break: break-word;">
-            ${escapeHTML(item.text)}
-          </p>
-        </div>
-      `).join('');
-    }
-  };
-
-  const escapeHTML = (str) => {
-    return str.replace(/[&<>'"]/g, 
-      tag => ({
-        '&': '&amp;',
-        '<': '&lt;',
-        '>': '&gt;',
-        "'": '&#39;',
-        '"': '&quot;'
-      }[tag] || tag)
-    );
-  };
-
-  if (adminTrigger && adminModal && adminClose) {
-    adminTrigger.addEventListener('click', () => {
-      updateAdminList();
-      adminModal.style.display = 'flex';
-    });
-
-    adminClose.addEventListener('click', () => {
-      adminModal.style.display = 'none';
-    });
-
-    // Close when clicking outside of modal content
-    adminModal.addEventListener('click', (e) => {
-      if (e.target === adminModal) {
-        adminModal.style.display = 'none';
-      }
+  // Congrats Lottie Animation
+  const congratsLottieContainer = document.getElementById('congratsLottieContainer');
+  if (congratsLottieContainer && typeof congratsAnimationData !== 'undefined') {
+    lottie.loadAnimation({
+      container: congratsLottieContainer,
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      animationData: congratsAnimationData
     });
   }
 });

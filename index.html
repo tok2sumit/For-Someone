@@ -16,6 +16,7 @@
   <script src="images/two-people-thinking-data.js"></script>
   <script src="images/guitar-cozy-data.js"></script>
   <script src="images/relaxing-chair-data.js"></script>
+  <script src="images/congrats-data.js"></script>
   
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="style.css">
@@ -212,84 +213,41 @@
 
   </main>
 
-  <!-- Feedback Section -->
-  <section class="feedback-section reveal">
+  <!-- Reply Section -->
+  <section class="reply-section reveal">
     <div class="container">
-      <div class="feedback-card" id="feedbackCard">
+      <div class="reply-card">
+        <!-- Lottie congrats animation -->
+        <div class="congrats-lottie-container" id="congratsLottieContainer"></div>
         
-        <!-- Form State -->
-        <div id="formCard">
-          <div class="feedback-intro">
-            <h2>Leave Your Feedback ✍️</h2>
-            <p>Your thoughts mean a lot to me. Choose a mood and leave a note below—only you and I will know what you write.</p>
-          </div>
-          
-          <form id="feedbackForm">
-            <div class="form-group">
-              <label>How did reading this make you feel?</label>
-              <div class="mood-selector">
-                <button type="button" class="mood-btn" data-mood="Warmly Smiling">
-                  😊 Warmly Smiling
-                </button>
-                <button type="button" class="mood-btn" data-mood="Intrigued &amp; Curious">
-                  ✨ Curious to Know More
-                </button>
-                <button type="button" class="mood-btn" data-mood="Happy &amp; Peaceful">
-                  💚 Happy &amp; Peaceful
-                </button>
-              </div>
-            </div>
-            
-            <div class="form-group">
-              <label for="feedbackText">Your Thoughts / Notes</label>
-              <textarea id="feedbackText" class="form-control" rows="5" placeholder="Share whatever is on your mind..."></textarea>
-            </div>
-            
-            <button type="submit" class="submit-btn">
-              <span>Send Your Response</span>
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
-              </svg>
-            </button>
-          </form>
+        <div class="reply-header">
+          <span class="reply-badge">Her Response 💚</span>
+          <span class="reply-date">A Beautiful Confirmation</span>
         </div>
-
-        <!-- Success State -->
-        <div id="successState" class="feedback-success">
-          <div class="success-icon">
-            <div class="success-glow"></div>
-            <svg viewBox="0 0 24 24" fill="currentColor">
+        
+        <div class="reply-content">
+          <p class="reply-paragraph">"This feels so special and im happy and curious to know this side of urs too.</p>
+          <p class="reply-paragraph">I know im usually pretty good at putting my emotions into words and express it but right now I do not have much because maybe im too overwhelmed right now .</p>
+          <p class="reply-paragraph">I'll be more than happy with a shy guy if this is what a shy guy can do 😅</p>
+          <p class="reply-paragraph">I respect who you are and I'll be fine with just the way you are (with a bit of modifications 😉)"</p>
+        </div>
+        
+        <div class="reply-footer">
+          <div class="heart-pulse-glow">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="var(--color-primary)">
               <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
             </svg>
           </div>
-          <h3>Thank you for sharing 🌸</h3>
-          <p>Your response has been saved. I'm really looking forward to talking more with you soon.</p>
+          <span class="reply-footer-text">Here's to stepping forward together... 🌱</span>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- Completely blank footer. The admin feedback viewer trigger is placed invisibly in the bottom-right corner -->
-  <button id="adminTrigger" style="position: fixed; bottom: 15px; right: 15px; width: 24px; height: 24px; opacity: 0; cursor: default; border: none; background: none; z-index: 1000;" title="System"></button>
-
-  <!-- Admin Modal -->
-  <div class="admin-modal" id="adminModal">
-    <div class="admin-modal-content">
-      <div class="admin-modal-header">
-        <h3 style="margin: 0; font-family: var(--font-sans); font-weight: 600;">Submitted Responses 📝</h3>
-        <button class="admin-modal-close" id="adminClose">&times;</button>
-      </div>
-      <div class="admin-modal-body">
-        <p id="noFeedbackMsg" style="text-align: center; color: var(--color-text-light); margin: 20px 0;">
-          No responses received yet.
-        </p>
-        <div id="adminList">
-          <!-- Dynamic Feedback Entries Go Here -->
-        </div>
-      </div>
-    </div>
-  </div>
+  <!-- Simple Footer -->
+  <footer class="reply-footer-simple">
+    <p>Made with 💚</p>
+  </footer>
 
   <!-- JavaScript -->
   <script src="script.js"></script>

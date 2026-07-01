@@ -915,16 +915,147 @@ body.locked {
     grid-template-columns: 1fr;
   }
   
-  .feedback-card {
-    padding: 24px 16px;
+  .reply-card {
+    padding: 28px 20px;
   }
   
-  .mood-selector {
+  .reply-header {
+    flex-direction: column;
     gap: 8px;
+    align-items: flex-start;
   }
   
-  .mood-btn {
-    padding: 10px 16px;
-    font-size: 0.8rem;
+  .reply-paragraph {
+    font-size: 1.08rem;
   }
+}
+
+/* She Replied / Reply Card Styles */
+.reply-section {
+  padding: 80px 0 100px 0;
+  position: relative;
+  z-index: 10;
+}
+
+.reply-card {
+  background: var(--color-white);
+  border-radius: 24px;
+  padding: 48px;
+  box-shadow: 0 15px 45px rgba(30, 63, 32, 0.05);
+  border: 1px solid rgba(107, 142, 35, 0.15);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  transition: var(--transition-smooth);
+}
+
+.reply-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 55px rgba(30, 63, 32, 0.08);
+}
+
+.congrats-lottie-container {
+  width: 160px;
+  height: 160px;
+  margin: -10px auto 20px auto;
+  pointer-events: none;
+}
+
+.reply-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(107, 142, 35, 0.1);
+  padding-bottom: 16px;
+  margin-bottom: 28px;
+}
+
+.reply-badge {
+  font-family: var(--font-sans);
+  background: rgba(107, 142, 35, 0.1);
+  color: var(--color-primary);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.reply-date {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  font-weight: 500;
+}
+
+.reply-content {
+  text-align: left;
+  margin-bottom: 36px;
+}
+
+.reply-paragraph {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--color-primary);
+  font-style: italic;
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 10px;
+}
+
+.reply-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.reply-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  border-top: 1px solid rgba(107, 142, 35, 0.1);
+  padding-top: 28px;
+}
+
+.heart-pulse-glow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(107, 142, 35, 0.08);
+  animation: heartPulse 2.5s infinite ease-in-out;
+}
+
+@keyframes heartPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(30, 63, 32, 0.2);
+  }
+  70% {
+    transform: scale(1.08);
+    box-shadow: 0 0 0 15px rgba(30, 63, 32, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(30, 63, 32, 0);
+  }
+}
+
+.reply-footer-text {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.reply-footer-simple {
+  text-align: center;
+  padding: 40px 24px;
+  border-top: 1px solid rgba(107, 142, 35, 0.08);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
